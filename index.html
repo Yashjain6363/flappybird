@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Flappy Bird: Premium Edition</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Main Game Window -->
+        <div id="game-wrapper">
+            <!-- Canvas for Game Graphics -->
+            <canvas id="game-canvas"></canvas>
+
+            <!-- Real-time HUD -->
+            <div id="hud" class="ui-layer hidden">
+                <div class="hud-top">
+                    <button id="pause-btn" class="icon-btn" aria-label="Pause Game">
+                        <i class="fa-solid fa-pause"></i>
+                    </button>
+                    <div id="hud-score-container">
+                        <span id="hud-score">0</span>
+                    </div>
+                    <button id="mute-btn" class="icon-btn" aria-label="Mute Audio">
+                        <i id="mute-icon" class="fa-solid fa-volume-high"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Start Menu Overlay -->
+            <div id="start-screen" class="ui-layer menu-overlay">
+                <div class="menu-content glassmorphism">
+                    <h1 class="game-title">FLAPPY<br><span class="title-highlight">BIRD</span></h1>
+                    <p class="game-subtitle">PREMIUM EDITION</p>
+
+                    <!-- Theme Selector -->
+                    <div class="theme-selector-container">
+                        <h3>SELECT THEME</h3>
+                        <div class="theme-buttons">
+                            <button class="theme-btn active" data-theme="retro">
+                                <span class="theme-icon">🌅</span> Retro
+                            </button>
+                            <button class="theme-btn" data-theme="neon">
+                                <span class="theme-icon">🌌</span> Cyber
+                            </button>
+                            <button class="theme-btn" data-theme="forest">
+                                <span class="theme-icon">🌲</span> Forest
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Instructions / Controls -->
+                    <div class="controls-guide">
+                        <div class="control-item">
+                            <span class="key-badge">Space</span> or <span class="key-badge">Click</span>
+                            <span class="control-label">to Flap / Jump</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key-badge">Esc</span>
+                            <span class="control-label">to Pause</span>
+                        </div>
+                    </div>
+
+                    <button id="start-btn" class="btn btn-primary btn-glow animate-pulse">
+                        <i class="fa-solid fa-play"></i> START GAME
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pause Overlay -->
+            <div id="pause-screen" class="ui-layer menu-overlay hidden">
+                <div class="menu-content glassmorphism">
+                    <h2 class="menu-title"><i class="fa-solid fa-pause"></i> GAME PAUSED</h2>
+                    
+                    <div class="button-group-vertical">
+                        <button id="resume-btn" class="btn btn-primary">
+                            <i class="fa-solid fa-play"></i> RESUME
+                        </button>
+                        <button id="restart-from-pause-btn" class="btn btn-secondary">
+                            <i class="fa-solid fa-rotate-right"></i> RESTART
+                        </button>
+                        <button id="quit-btn" class="btn btn-danger">
+                            <i class="fa-solid fa-house"></i> MAIN MENU
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Over Overlay -->
+            <div id="game-over-screen" class="ui-layer menu-overlay hidden">
+                <div class="menu-content glassmorphism">
+                    <h2 class="menu-title text-danger animate-bounce">GAME OVER</h2>
+                    
+                    <!-- Score Board Card -->
+                    <div class="score-card">
+                        <div class="score-row">
+                            <span class="score-label">SCORE</span>
+                            <span id="final-score" class="score-val">0</span>
+                        </div>
+                        <div class="score-row">
+                            <span class="score-label">BEST</span>
+                            <span id="high-score" class="score-val gold-text">0</span>
+                        </div>
+                        <div class="medal-container">
+                            <span class="medal-label">MEDAL</span>
+                            <div id="medal-slot">
+                                <span class="no-medal">None</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-group-horizontal">
+                        <button id="restart-btn" class="btn btn-primary btn-glow">
+                            <i class="fa-solid fa-rotate-right"></i> PLAY AGAIN
+                        </button>
+                        <button id="menu-btn" class="btn btn-secondary">
+                            <i class="fa-solid fa-house"></i> MENU
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script loading -->
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
