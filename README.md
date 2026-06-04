@@ -1,48 +1,65 @@
-# 🐦 Flappy Bird - Premium Edition
+# 🐦 Flappy Bird - Premium Edition (Python & Web)
 
-A premium, highly-polished retro Flappy Bird game built using modern Web standards (HTML5 Canvas, CSS custom properties, and Vanilla JavaScript) with hot reloading powered by Vite.
-
-## ✨ Features
-- **Dynamic Physics & Smooth Controls**: Fine-tuned bird physics, responsive keyboard controls (`Space`, `ArrowUp`, or `W`) and click/touch screen controls.
-- **Selectable Themes**: Switch between three gorgeous visual styles on the fly:
-  - 🌅 **Retro Arcade**: Classic pixels with warm sunset tones and green pipe barriers.
-  - 🌌 **Neon Cyberpunk**: Glowing cyan/magenta grid landscape and dark vaporwave vibes.
-  - 🌲 **Midnight Forest**: Sleek silhouette graphics with forest-themed backdrops and deep green/blue colorways.
-- **Parallax Background Layers**: Multi-layer scrolling background (sky/clouds, city skyline, foreground mountains) that adds depth and movement.
-- **Built-in Web Audio Sound Synthesizer**: Uses the browser's native **Web Audio API** to generate sound effects dynamically (jump, score, crash) without requiring external MP3/WAV assets. Works 100% offline out-of-the-box!
-- **Particle System**: Feather burst effects on jumps, star bursts on passing obstacles, and explosion particles on crash.
-- **Juicy Screen Shake**: Feels satisfyingly impact-oriented when crashing.
-- **High Scores Leaderboard**: Track your best scores directly via `localStorage` persistence.
-
-## 🛠️ Tech Stack
-- **Bundler / Dev Server**: Vite (Vanilla JS)
-- **Graphics**: HTML5 Canvas API (highly optimized 60fps rendering)
-- **Styling**: Modern CSS3 (Glassmorphism overlays, custom typography, Google Fonts)
-- **Audio**: Web Audio API (Synthesizer)
+A premium, highly-polished retro Flappy Bird game. This repository contains two versions:
+1. 🐍 **Python Desktop Version**: Built using Pygame (native desktop app).
+2. 🌐 **Vite Web Version**: Built using HTML5 Canvas & Vanilla JS (modern web browser app).
 
 ---
 
-## 🚀 How to Run Locally
+## ✨ Features
+- **Dynamic Physics & Smooth Controls**: Fine-tuned bird physics, responsive keyboard controls (`Space` or `ArrowUp` or `W`) and mouse/touch controls.
+- **Selectable Themes**: Switch between three gorgeous visual styles on the fly:
+  - 🌅 **Retro Arcade**: Classic pixel style with warm sunset tones.
+  - 🌌 **Neon Cyberpunk**: Glowing cyan/magenta grid landscape and dark vaporwave vibes.
+  - 🌲 **Midnight Forest**: Silhouette pine trees and misty autumnal backdrops.
+- **Parallax Background Layers**: Multi-layer scrolling background (sky/clouds, city skyline, foreground mountains/forest) that adds depth and movement.
+- **Sound Synthesizer**: Generates all sound effects (flap, score, crash) dynamically using math waves. Zero external asset files needed, 100% offline, zero latency!
+- **Particle System**: Feather burst effects on jumps, star bursts on passing obstacles, and explosion particles on crash.
+- **Juicy Screen Shake**: Feels satisfyingly impact-oriented when crashing.
+- **High Scores Leaderboard**: Track your best scores directly via local persistence.
+
+---
+
+## 🐍 1. Running the Python Desktop Version
+
+### Prerequisites
+Make sure you have [Python 3](https://www.python.org/) installed.
+
+### Installation
+Open your terminal in this directory and run:
+```bash
+pip install -r requirements.txt
+```
+
+### Running the game
+```bash
+python main.py
+```
+
+### Controls (Python)
+- **Jump / Flap**: `Space`, `Up Arrow`, `W`, or **Left Mouse Click**
+- **Pause / Resume**: `Escape`
+- **Mute / Unmute Sound**: `M`
+- **Theme Selection**: Click the themed buttons (*Retro*, *Cyber*, *Forest*) on the Start screen with your mouse.
+
+---
+
+## 🌐 2. Running the Vite Web Version
 
 ### Prerequisites
 Make sure you have [Node.js](https://nodejs.org/) installed.
 
-### 1. Install dependencies:
+### Installation
+Open your terminal in this directory and run:
 ```bash
 npm install
 ```
 
-### 2. Start the development server:
+### Running the game
 ```bash
 npm run dev
 ```
 Open your browser and navigate to the address printed in the terminal (usually `http://localhost:5173`).
-
-### 3. Build for Production:
-```bash
-npm run build
-```
-This will bundle the game inside the `/dist` directory.
 
 ---
 
@@ -59,13 +76,13 @@ git init
 ### 2. Add files and make your first commit
 ```bash
 git add .
-git commit -m "feat: initial commit of premium flappy bird game"
+git commit -m "feat: premium flappy bird game in python and web"
 ```
 
 ### 3. Create a repository on GitHub
 - Go to [GitHub](https://github.com/) and click **New Repository**.
 - Name it (e.g., `flappy-bird-premium`) and leave it public or private.
-- **Do not** initialize it with a README, gitignore, or license (we already created them!).
+- **Do not** initialize it with a README, gitignore, or license.
 
 ### 4. Link your local repository to GitHub and push
 Replace `your-username` and `your-repo-name` with your actual details:
@@ -74,7 +91,3 @@ git branch -M main
 git remote add origin https://github.com/your-username/your-repo-name.git
 git push -u origin main
 ```
-
----
-
-Enjoy the game! 🎮
